@@ -1,0 +1,3 @@
+debian/manpages/threadcoind.1
+debian/manpages/threadcoin.conf.5
+debian/manpages/threadcoin-cli.1

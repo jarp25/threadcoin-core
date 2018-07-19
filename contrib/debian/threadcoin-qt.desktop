@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Threadcoin
+Comment=Threadcoin P2P Cryptocurrency
+Comment[fr]=Threadcoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Threadcoin, eşten eşe kriptografik sanal para birimi
+Exec=threadcoin-qt %u
+Terminal=false
+Type=Application
+Icon=threadcoin128
+MimeType=x-scheme-handler/threadcoin;
+Categories=Office;Finance;

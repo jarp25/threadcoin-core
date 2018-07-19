@@ -1,0 +1,22 @@
+[Unit]
+Description=Threadcoin's distributed currency daemon
+After=network.target
+
+[Service]
+User=threadcoincore
+Group=threadcoincore
+
+Type=forking
+PIDFile=/var/lib/threadcoind/threadcoind.pid
+ExecStart=/usr/bin/threadcoind -daemon -pid=/var/lib/threadcoind/threadcoind.pid \
+-conf=/etc/threadcoincore/threadcoin.conf -datadir=/var/lib/threadcoind -disablewallet
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,6 @@
+usr/local/bin/threadcoin-qt usr/bin
+share/pixmaps/threadcoin32.xpm usr/share/pixmaps
+share/pixmaps/threadcoin16.xpm usr/share/pixmaps
+share/pixmaps/threadcoin128.png usr/share/pixmaps
+debian/threadcoin-qt.desktop usr/share/applications
+debian/threadcoin-qt.protocol usr/share/kde4/services/
