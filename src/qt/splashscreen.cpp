@@ -35,7 +35,7 @@ SplashScreen::SplashScreen(Qt::WindowFlags f, const NetworkStyle *networkStyle) 
 
     // set reference point, paddings
     int paddingLeft             = 14;
-    int paddingTop              = 470;
+    int paddingTop              = 458;
     int titleVersionVSpace      = 17;
     int titleCopyrightVSpace    = 32;
 
@@ -45,7 +45,8 @@ SplashScreen::SplashScreen(Qt::WindowFlags f, const NetworkStyle *networkStyle) 
     QString titleText       = tr("Threadcoin Core");
     QString versionText     = QString(tr("Version %1")).arg(QString::fromStdString(FormatFullVersion()));
     QString copyrightTextBtc   = QChar(0xA9)+QString(" 2009-%1 ").arg(COPYRIGHT_YEAR) + QString(tr("The Bitcoin Core developers"));
-    QString copyrightTextThreadcoin   = QChar(0xA9)+QString(" 2014-%1 ").arg(COPYRIGHT_YEAR) + QString(tr("The Dash Core developers"));
+    QString copyrightTextdash   = QChar(0xA9)+QString(" 2014-%1 ").arg(COPYRIGHT_YEAR) + QString(tr("The Dash Core developers"));
+    QString copyrightTextThreadcoin   = QChar(0xA9)+QString(" 2018-%1 ").arg(COPYRIGHT_YEAR) + QString(tr("The Threadcoin Core developers"));
     QString titleAddText    = networkStyle->getTitleAddText();
     // networkstyle.cpp can't (yet) read themes, so we do it here to get the correct Splash-screen
     QString splashScreenPath = ":/images/" + GUIUtil::getThemeName() + "/splash";
@@ -74,7 +75,7 @@ SplashScreen::SplashScreen(Qt::WindowFlags f, const NetworkStyle *networkStyle) 
     pixPaint.setFont(QFont(font, 28*fontFactor));
     fm = pixPaint.fontMetrics();
     titleTextWidth  = fm.width(titleText);
-    pixPaint.drawText(paddingLeft,paddingTop,titleText);
+    pixPaint.drawText(paddingLeft-12,paddingTop,titleText);
 
     pixPaint.setFont(QFont(font, 15*fontFactor));
     pixPaint.drawText(paddingLeft,paddingTop+titleVersionVSpace,versionText);
@@ -82,7 +83,8 @@ SplashScreen::SplashScreen(Qt::WindowFlags f, const NetworkStyle *networkStyle) 
     // draw copyright stuff
     pixPaint.setFont(QFont(font, 10*fontFactor));
     pixPaint.drawText(paddingLeft,paddingTop+titleCopyrightVSpace,copyrightTextBtc);
-    pixPaint.drawText(paddingLeft,paddingTop+titleCopyrightVSpace+12,copyrightTextThreadcoin);
+    pixPaint.drawText(paddingLeft,paddingTop+titleCopyrightVSpace+12,copyrightTextdash);
+    pixPaint.drawText(paddingLeft,paddingTop+titleCopyrightVSpace+24,copyrightTextThreadcoin);
 
     // draw additional text if special network
     if(!titleAddText.isEmpty()) {
