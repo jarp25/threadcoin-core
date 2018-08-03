@@ -94,7 +94,7 @@ sudo apt-get install libqt4-dev libprotobuf-dev protobuf-compiler
 
 cd ~
 
-git clone
+git clone https://github.com/ThreadCoinDev/threadcoin.git
 
 cd thread
 
