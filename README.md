@@ -111,8 +111,11 @@ make install ### optional
 
 
 ./src/threadcoind
+
 ./src/threadcoin-cli
+
 ./src/qt/threadcoin-qt
+
 
 =====
 
